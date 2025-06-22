@@ -25,7 +25,7 @@ public class GeradorJogoService {
                 estrategia, quantidade, ultimos);
 
         int ultimoConcurso = concursoRepository.findUltimoConcurso();
-        int idMinimo = (ultimos != null) ? ultimoConcurso - ultimos + 1 : 1;
+        int idMinimo = (ultimos != 0) ? ultimoConcurso - ultimos + 1 : 1;
 
         log.debug("Buscando concursos com ID entre {} e {}", idMinimo, ultimoConcurso);
 

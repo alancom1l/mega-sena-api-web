@@ -37,7 +37,7 @@ public class JogoController {
             Integer ultimos
     ){
         log.info("Gerando jogo com {} números usando estratégia {} e últimos {} concursos",
-                quantidade, estrategia, ultimos != null ? ultimos : "todos");
+                quantidade, estrategia, ultimos != 0 ? ultimos : "todos");
         List<Integer> jogo = jogoService.gerarJogo(quantidade, estrategia, ultimos);
         return ResponseEntity.ok(jogo);
     }
