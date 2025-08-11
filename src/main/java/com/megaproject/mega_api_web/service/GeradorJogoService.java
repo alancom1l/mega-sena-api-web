@@ -72,8 +72,7 @@ public class GeradorJogoService {
             }
         }
 
-        Collections.shuffle(resultado);
-        List<Integer> jogoFinal = resultado.stream().limit(quantidade).sorted().toList();
+        List<Integer> jogoFinal = resultado.stream().sorted().toList();
 
         log.info("Jogo gerado com sucesso: {}", jogoFinal);
         return jogoFinal;
